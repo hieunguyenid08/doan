@@ -4,8 +4,8 @@ import styles from "./styles";
 import { categories } from "../../data/dataArrays";
 import { getNumberOfRecipes } from "../../data/MockDataAPI";
 import MenuImage from "../../components/MenuImage/MenuImage";
-
-export default function CategoriesScreen(props) {
+import { Icon } from "react-native-vector-icons/FontAwesome";
+export default function FanScreen(props) {
   const { navigation } = props;
 
   useLayoutEffect(() => {
@@ -23,7 +23,11 @@ export default function CategoriesScreen(props) {
           }}
         />
       ),
-      headerRight: () => <View />,
+      headerRight: () => ( <MenuImage
+        onPress={() => {
+          navigation.openDrawer();
+        }}
+      />),
     });
   }, []);
 

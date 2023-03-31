@@ -3,7 +3,7 @@ import { View } from "react-native";
 import PropTypes from "prop-types";
 import styles from "./styles";
 import MenuButton from "../../components/MenuButton/MenuButton";
-
+import { Icon } from "react-native-vector-icons/FontAwesome";
 export default function DrawerContainer(props) {
   const { navigation } = props;
   return (
@@ -18,10 +18,10 @@ export default function DrawerContainer(props) {
           }}
         />
         <MenuButton
-          title="CATEGORIES"
-          source={require("../../../assets/icons/category.png")}
+          title="Fan Adjusting"
+          source={require("../../../assets/icons/fan.png")}
           onPress={() => {
-            navigation.navigate("Categories");
+            navigation.navigate("Fan Adjusting");
             navigation.closeDrawer();
           }}
         />
